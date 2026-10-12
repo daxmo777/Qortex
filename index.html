@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qortex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header & Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #222;
+            text-decoration: none;
+        }
+
+        /* Hamburger Button */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 200;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #222;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* Hamburger Animation (X when open) */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Mobile Menu - CLOSED by default */
+        .nav-links {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100vh;
+            width: 250px;
+            background: #fff;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            padding-top: 80px;
+            gap: 2rem;
+            transition: right 0.3s ease;
+        }
+
+        /* Menu OPEN state */
+        .nav-links.active {
+            right: 0;
+        }
+
+        .nav-links a {
+            padding: 0.5rem 2rem;
+            text-decoration: none;
+            color: #222;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #555;
+        }
+
+        /* Overlay when menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            z-index: 50;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-btn {
+            padding: 0.9rem 2rem;
+            background: white;
+            color: #764ba2;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Qortex</a>
+            
+            <!-- Hamburger - ALWAYS VISIBLE, CLOSED by default -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Menu - Hidden until clicked -->
+        <nav class="nav-links" id="navLinks">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Dark Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Qortex</h1>
+        <p>We create stunning websites and professional videos that bring your brand to life.</p>
+        <a href="#" class="hero-btn">Get Started</a>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+
+        // Toggle menu open/closed
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+    
+</body>
+</html>
