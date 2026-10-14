@@ -50,8 +50,8 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #07080a;
-            color: #e2e8f0;
+            background-color: #ffffff;
+            color: #1a1a1a;
             overflow-x: hidden;
         }
 
@@ -77,6 +77,37 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .banner {
+            --banner-img: linear-gradient(transparent, transparent);
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 1rem;
+            text-align: center;
+            background-color: #0d0f14;
+            background-image:
+                linear-gradient(rgba(7, 8, 10, 0.35), rgba(7, 8, 10, 0.6)),
+                var(--banner-img),
+                radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.28), transparent 65%);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .light-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        .light-card .gold-gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #aa8625 50%, #806019 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .glass-nav {
@@ -125,10 +156,10 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #07080a;
+            background: #f5f5f5;
         }
         ::-webkit-scrollbar-thumb {
-            background: #1e2433;
+            background: #c9c9c9;
             border-radius: 4px;
             border: 1px solid rgba(212, 175, 55, 0.3);
         }
@@ -252,36 +283,36 @@
     </section>
 
     <!-- ================= SERVICES CORE WITH FILTER TABS ================= -->
-    <section id="services" class="py-24 px-4 bg-carbon-950 relative border-t border-white/5">
+    <section id="services" class="py-24 px-4 bg-white relative border-t border-neutral-200">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Core Capabilities</h2>
-                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Precision Digital Solutions</p>
-                <p class="text-gray-400 text-sm mt-3">From custom full-stack web builds to viral video creatives engineered for max conversion.</p>
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-600 font-bold mb-3">Core Capabilities</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900">Precision Digital Solutions</p>
+                <p class="text-neutral-500 text-sm mt-3">From custom full-stack web builds to viral video creatives engineered for max conversion.</p>
             </div>
 
             <!-- Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-2 mb-12">
-                <button onclick="filterServices('all')" id="btn-all" class="service-tab-btn active glass-card border border-gold-500 px-5 py-2 rounded-full text-xs font-semibold text-gold-400">All Solutions</button>
-                <button onclick="filterServices('web')" id="btn-web" class="service-tab-btn glass-card border border-white/10 px-5 py-2 rounded-full text-xs font-semibold text-gray-400 hover:text-white">Web Development</button>
-                <button onclick="filterServices('video')" id="btn-video" class="service-tab-btn glass-card border border-white/10 px-5 py-2 rounded-full text-xs font-semibold text-gray-400 hover:text-white">20-Sec Video Ads</button>
-                <button onclick="filterServices('social')" id="btn-social" class="service-tab-btn glass-card border border-white/10 px-5 py-2 rounded-full text-xs font-semibold text-gray-400 hover:text-white">Social Architecture</button>
+                <button onclick="filterServices('all')" id="btn-all" class="service-tab-btn active light-card border border-gold-500 px-5 py-2 rounded-full text-xs font-semibold text-gold-700">All Solutions</button>
+                <button onclick="filterServices('web')" id="btn-web" class="service-tab-btn light-card border border-neutral-200 px-5 py-2 rounded-full text-xs font-semibold text-neutral-500 hover:text-neutral-900">Web Development</button>
+                <button onclick="filterServices('video')" id="btn-video" class="service-tab-btn light-card border border-neutral-200 px-5 py-2 rounded-full text-xs font-semibold text-neutral-500 hover:text-neutral-900">20-Sec Video Ads</button>
+                <button onclick="filterServices('social')" id="btn-social" class="service-tab-btn light-card border border-neutral-200 px-5 py-2 rounded-full text-xs font-semibold text-neutral-500 hover:text-neutral-900">Social Architecture</button>
             </div>
 
             <!-- Service Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="servicesGrid">
                 <!-- Service 1 -->
-                <div class="service-card web glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                <div class="service-card web light-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-xl mb-6">
                             <i class="fa-solid fa-code"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Custom Web Architecture</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        <h3 class="text-lg font-bold text-neutral-900 mb-2">Custom Web Architecture</h3>
+                        <p class="text-xs text-neutral-500 leading-relaxed mb-4">
                             High-speed custom websites built with clean code and zero bloated templates. Engineered for sub-second page loads.
                         </p>
                     </div>
-                    <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-4">
+                    <ul class="text-xs text-neutral-600 space-y-2 border-t border-neutral-200 pt-4">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> PageSpeed 95+ Score</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Mobile-First Responsive</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Custom Interactive Logic</li>
@@ -289,17 +320,17 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="service-card web glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                <div class="service-card web light-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-xl mb-6">
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Web Modifications & UX</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        <h3 class="text-lg font-bold text-neutral-900 mb-2">Web Modifications & UX</h3>
+                        <p class="text-xs text-neutral-500 leading-relaxed mb-4">
                             Rapid enhancement and conversion redesign for Shopify, Webflow, WordPress, or React platforms.
                         </p>
                     </div>
-                    <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-4">
+                    <ul class="text-xs text-neutral-600 space-y-2 border-t border-neutral-200 pt-4">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Conversion Rate Optimization</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Layout & UI Overhauls</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Technical SEO Audits</li>
@@ -307,17 +338,17 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="service-card video glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                <div class="service-card video light-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-xl mb-6">
                             <i class="fa-solid fa-clapperboard"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2">20-Sec Short Video Ads</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        <h3 class="text-lg font-bold text-neutral-900 mb-2">20-Sec Short Video Ads</h3>
+                        <p class="text-xs text-neutral-500 leading-relaxed mb-4">
                             High-velocity short-form creatives engineered with 3-second viral hooks specifically for TikTok, Reels, and Shorts.
                         </p>
                     </div>
-                    <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-4">
+                    <ul class="text-xs text-neutral-600 space-y-2 border-t border-neutral-200 pt-4">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Hook-First Storyboarding</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Motion Graphics & Captions</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Multi-Ratio Exporting</li>
@@ -325,17 +356,17 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="service-card social glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                <div class="service-card social light-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-xl mb-6">
                             <i class="fa-solid fa-share-nodes"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-2">Social Creation & Mgmt</h3>
-                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        <h3 class="text-lg font-bold text-neutral-900 mb-2">Social Creation & Mgmt</h3>
+                        <p class="text-xs text-neutral-500 leading-relaxed mb-4">
                             Full channel setup, branding identity, automated post scheduling, and strategic audience growth management.
                         </p>
                     </div>
-                    <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-4">
+                    <ul class="text-xs text-neutral-600 space-y-2 border-t border-neutral-200 pt-4">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Profile Branding & Bios</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Content Publishing Schedule</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Monthly Analytics Reporting</li>
@@ -345,46 +376,58 @@
         </div>
     </section>
 
+    <!-- ================= IMAGE BANNER 1 =================
+         To add a photo: put your image in an "images" folder next to index.html and name it banner-1.jpg
+         (or change the file name in the style attribute below). Until then a gold-lit dark background shows. -->
+    <section class="banner" style="--banner-img: url('images/banner-1.jpg');">
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <div class="text-[11px] uppercase tracking-[0.3em] text-gold-400 font-bold mb-4 hero-text-shadow">Websites</div>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight mb-4 hero-text-shadow">Your business, online and impossible to ignore.</h2>
+            <p class="text-sm sm:text-base text-gray-100 font-light leading-relaxed mb-8 hero-text-shadow">Clean, fast websites built to turn visitors into customers.</p>
+            <a href="#bundles" class="gold-btn inline-block px-8 py-3.5 rounded-xl text-xs font-extrabold tracking-widest uppercase">See website packages</a>
+        </div>
+    </section>
+
     <!-- ================= PRE-SET PACKAGES & BUNDLES ================= -->
-    <section id="bundles" class="py-24 px-4 bg-carbon-900 relative">
+    <section id="bundles" class="py-24 px-4 bg-neutral-50 relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Website Packages</h2>
-                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Choose Your Website Package</p>
-                <p class="text-gray-400 text-sm mt-3">Three clear 5-page website packages for small businesses, or customize your exact needs below.</p>
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-600 font-bold mb-3">Website Packages</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900">Choose Your Website Package</p>
+                <p class="text-neutral-500 text-sm mt-3">Three clear 5-page website packages for small businesses, or customize your exact needs below.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Tier 1: Starter -->
-                <div class="glass-card rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-gold-500/40 transition-all">
+                <div class="light-card rounded-2xl p-8 border border-neutral-200 flex flex-col justify-between hover:border-gold-500/40 transition-all">
                     <div>
-                        <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Get Online</span>
-                        <h3 class="text-2xl font-serif font-bold text-white mt-1 mb-2">Starter</h3>
+                        <span class="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">Get Online</span>
+                        <h3 class="text-2xl font-serif font-bold text-neutral-900 mt-1 mb-2">Starter</h3>
                         <div class="text-3xl font-bold gold-gradient-text font-serif mb-6">£500</div>
-                        <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                        <ul class="space-y-3 text-xs text-neutral-600 mb-8">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 5-Page Website</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Mobile Responsive</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Contact Form</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Basic SEO Setup</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 1 × 20-Sec Video Ad</li>
-                            <li class="flex items-center gap-2 text-gray-500"><i class="fa-solid fa-xmark"></i> Custom Design &amp; Speed Optimization</li>
+                            <li class="flex items-center gap-2 text-neutral-400"><i class="fa-solid fa-xmark"></i> Custom Design &amp; Speed Optimization</li>
                         </ul>
                     </div>
-                    <button onclick="openModal('Starter Website Package (£500)')" class="w-full glass-card hover:bg-carbon-800 text-white border border-gold-500/30 py-3.5 rounded-xl text-xs uppercase font-bold tracking-widest transition-all">
+                    <button onclick="openModal('Starter Website Package (£500)')" class="w-full light-card hover:bg-neutral-100 text-neutral-900 border border-gold-500/30 py-3.5 rounded-xl text-xs uppercase font-bold tracking-widest transition-all">
                         Select Plan
                     </button>
                 </div>
 
                 <!-- Tier 2: Standard (Featured) -->
-                <div class="glass-card rounded-2xl p-8 border-2 border-gold-500 relative flex flex-col justify-between shadow-2xl shadow-gold-500/10 scale-105 z-10">
+                <div class="light-card rounded-2xl p-8 border-2 border-gold-500 relative flex flex-col justify-between shadow-2xl shadow-gold-500/10 scale-105 z-10">
                     <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold-500 text-black text-[10px] uppercase tracking-widest font-extrabold px-4 py-1 rounded-full shadow-md">
                         Most Popular
                     </div>
                     <div>
-                        <span class="text-[10px] uppercase tracking-widest text-gold-400 font-bold">Stand Out</span>
-                        <h3 class="text-2xl font-serif font-bold text-white mt-1 mb-2">Standard</h3>
+                        <span class="text-[10px] uppercase tracking-widest text-gold-700 font-bold">Stand Out</span>
+                        <h3 class="text-2xl font-serif font-bold text-neutral-900 mt-1 mb-2">Standard</h3>
                         <div class="text-3xl font-bold gold-gradient-text font-serif mb-6">£1,250</div>
-                        <ul class="space-y-3 text-xs text-gray-200 mb-8">
+                        <ul class="space-y-3 text-xs text-neutral-700 mb-8">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Everything in Starter</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Fully Custom Design</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Speed Optimization</li>
@@ -399,12 +442,12 @@
                 </div>
 
                 <!-- Tier 3: Premium -->
-                <div class="glass-card rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-gold-500/40 transition-all">
+                <div class="light-card rounded-2xl p-8 border border-neutral-200 flex flex-col justify-between hover:border-gold-500/40 transition-all">
                     <div>
-                        <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Win Customers</span>
-                        <h3 class="text-2xl font-serif font-bold text-white mt-1 mb-2">Premium</h3>
+                        <span class="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">Win Customers</span>
+                        <h3 class="text-2xl font-serif font-bold text-neutral-900 mt-1 mb-2">Premium</h3>
                         <div class="text-3xl font-bold gold-gradient-text font-serif mb-6">£1,900</div>
-                        <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                        <ul class="space-y-3 text-xs text-neutral-600 mb-8">
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Everything in Standard</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Full Copywriting for All Pages</li>
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 5 × 20-Sec Video Ads</li>
@@ -413,7 +456,7 @@
                             <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 30 Days of Support</li>
                         </ul>
                     </div>
-                    <button onclick="openModal('Premium Website Package (£1,900)')" class="w-full glass-card hover:bg-carbon-800 text-white border border-gold-500/30 py-3.5 rounded-xl text-xs uppercase font-bold tracking-widest transition-all">
+                    <button onclick="openModal('Premium Website Package (£1,900)')" class="w-full light-card hover:bg-neutral-100 text-neutral-900 border border-gold-500/30 py-3.5 rounded-xl text-xs uppercase font-bold tracking-widest transition-all">
                         Select Plan
                     </button>
                 </div>
@@ -422,25 +465,25 @@
     </section>
 
     <!-- ================= INTERACTIVE ESTIMATOR & CALCULATOR ================= -->
-    <section id="calculator" class="py-24 px-4 bg-carbon-950 relative border-t border-white/5">
+    <section id="calculator" class="py-24 px-4 bg-white relative border-t border-neutral-200">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Transparent Costing</h2>
-                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Interactive Scope & Budget Calculator</p>
-                <p class="text-gray-400 text-sm mt-2">Adjust your requirements in real-time to generate your custom project estimate.</p>
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-600 font-bold mb-3">Transparent Costing</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900">Interactive Scope & Budget Calculator</p>
+                <p class="text-neutral-500 text-sm mt-2">Adjust your requirements in real-time to generate your custom project estimate.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 <!-- Inputs Box -->
-                <div class="lg:col-span-7 glass-card rounded-2xl p-6 sm:p-8 space-y-8 border border-white/10">
+                <div class="lg:col-span-7 light-card rounded-2xl p-6 sm:p-8 space-y-8 border border-neutral-200">
                     
                     <!-- Web Select -->
                     <div>
-                        <label class="block text-xs font-bold text-white uppercase tracking-wider mb-3 flex items-center justify-between">
+                        <label class="block text-xs font-bold text-neutral-900 uppercase tracking-wider mb-3 flex items-center justify-between">
                             <span><i class="fa-solid fa-laptop-code text-gold-500 mr-2"></i> Web Engineering Scope</span>
-                            <span id="webDevLabel" class="text-gold-400 font-semibold">£1,250</span>
+                            <span id="webDevLabel" class="text-gold-700 font-semibold">£1,250</span>
                         </label>
-                        <select id="webDevSelect" onchange="calculateTotal()" class="w-full bg-carbon-900 border border-white/10 rounded-xl px-4 py-3.5 text-xs text-white focus:border-gold-500 outline-none">
+                        <select id="webDevSelect" onchange="calculateTotal()" class="w-full bg-neutral-100 border border-neutral-200 rounded-xl px-4 py-3.5 text-xs text-neutral-900 focus:border-gold-500 outline-none">
                             <option value="0" data-videos="0">None / Existing Site Provided</option>
                             <option value="500" data-videos="1">Starter 5-Page Website (£500) — 1 video included</option>
                             <option value="1250" data-videos="3" selected>Standard 5-Page Website (£1,250) — 3 videos included</option>
@@ -452,64 +495,64 @@
                     <!-- Video Ads Range -->
                     <div>
                         <div class="flex justify-between items-center mb-3">
-                            <label class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
+                            <label class="text-xs font-bold text-neutral-900 uppercase tracking-wider flex items-center">
                                 <i class="fa-solid fa-video text-gold-500 mr-2"></i> 20-Sec Video Ads Bundle
                             </label>
-                            <span id="videoCountDisplay" class="text-xs font-bold text-gold-400 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30">
+                            <span id="videoCountDisplay" class="text-xs font-bold text-gold-700 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30">
                                 3 Videos (included)
                             </span>
                         </div>
-                        <input type="range" id="videoSlider" min="0" max="3" step="1" value="2" oninput="calculateTotal()" class="w-full h-2 bg-carbon-900 rounded-lg appearance-none cursor-pointer slider-thumb">
-                        <div class="flex justify-between text-[10px] text-gray-500 mt-2">
+                        <input type="range" id="videoSlider" min="0" max="3" step="1" value="2" oninput="calculateTotal()" class="w-full h-2 bg-neutral-300 rounded-lg appearance-none cursor-pointer slider-thumb">
+                        <div class="flex justify-between text-[10px] text-neutral-400 mt-2">
                             <span>0 videos</span>
                             <span>1 video</span>
                             <span>3 videos</span>
                             <span>6 videos</span>
                         </div>
-                        <p class="text-[11px] text-gray-400 mt-3">Videos are £50 each. Starter includes 1 video, Standard 3 and Premium 5.</p>
+                        <p class="text-[11px] text-neutral-500 mt-3">Videos are £50 each. Starter includes 1 video, Standard 3 and Premium 5.</p>
                     </div>
 
                     <!-- Social Media Toggles -->
                     <div>
-                        <label class="block text-xs font-bold text-white uppercase tracking-wider mb-3 flex items-center">
+                        <label class="block text-xs font-bold text-neutral-900 uppercase tracking-wider mb-3 flex items-center">
                             <i class="fa-solid fa-share-nodes text-gold-500 mr-2"></i> Social Channels & Ongoing Management
                         </label>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <label class="cursor-pointer glass-card p-3.5 rounded-xl border border-white/10 flex items-center gap-3 hover:border-gold-500/40 transition-all">
+                            <label class="cursor-pointer light-card p-3.5 rounded-xl border border-neutral-200 flex items-center gap-3 hover:border-gold-500/40 transition-all">
                                 <input type="checkbox" id="socialSetup" onchange="calculateTotal()" class="w-4 h-4 accent-gold-500 rounded">
-                                <span class="text-xs text-gray-200">Channel Setup & Branding (+£200)</span>
+                                <span class="text-xs text-neutral-700">Channel Setup & Branding (+£200)</span>
                             </label>
-                            <label class="cursor-pointer glass-card p-3.5 rounded-xl border border-white/10 flex items-center gap-3 hover:border-gold-500/40 transition-all">
+                            <label class="cursor-pointer light-card p-3.5 rounded-xl border border-neutral-200 flex items-center gap-3 hover:border-gold-500/40 transition-all">
                                 <input type="checkbox" id="socialMgmt" onchange="calculateTotal()" class="w-4 h-4 accent-gold-500 rounded" checked>
-                                <span class="text-xs text-gray-200">Monthly Account Mgmt (+£700/mo)</span>
+                                <span class="text-xs text-neutral-700">Monthly Account Mgmt (+£700/mo)</span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Priority Delivery Toggle -->
-                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                    <div class="pt-4 border-t border-neutral-200 flex items-center justify-between">
                         <div>
-                            <div class="text-xs font-bold text-white uppercase tracking-wider">72-Hour Priority Sprint</div>
-                            <div class="text-[11px] text-gray-400">Fast-track delivery with dedicated senior tech lead</div>
+                            <div class="text-xs font-bold text-neutral-900 uppercase tracking-wider">72-Hour Priority Sprint</div>
+                            <div class="text-[11px] text-neutral-500">Fast-track delivery with dedicated senior tech lead</div>
                         </div>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" id="rushDelivery" onchange="calculateTotal()" class="sr-only peer">
-                            <div class="w-11 h-6 bg-carbon-900 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gold-500"></div>
+                            <div class="w-11 h-6 bg-neutral-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gold-500"></div>
                         </label>
                     </div>
 
                 </div>
 
                 <!-- Result Card -->
-                <div class="lg:col-span-5 glass-card rounded-2xl p-6 sm:p-8 border border-gold-500/40 relative">
-                    <div class="text-[10px] uppercase tracking-widest text-gold-400 font-extrabold mb-2">Calculated Total Investment</div>
+                <div class="lg:col-span-5 light-card rounded-2xl p-6 sm:p-8 border border-gold-500/40 relative">
+                    <div class="text-[10px] uppercase tracking-widest text-gold-700 font-extrabold mb-2">Calculated Total Investment</div>
                     
                     <div class="flex items-baseline gap-2 mb-6">
                         <span id="totalPrice" class="text-4xl sm:text-5xl font-serif font-bold gold-gradient-text">£1,250</span>
-                        <span id="recurringNote" class="text-xs text-gray-400 font-light">+ £700/mo ongoing</span>
+                        <span id="recurringNote" class="text-xs text-neutral-500 font-light">+ £700/mo ongoing</span>
                     </div>
 
-                    <div class="space-y-3 border-t border-white/10 pt-6 text-xs text-gray-300 mb-8" id="summaryList">
+                    <div class="space-y-3 border-t border-neutral-200 pt-6 text-xs text-neutral-600 mb-8" id="summaryList">
                         <!-- Populated dynamically by JS -->
                     </div>
 
@@ -517,7 +560,7 @@
                         Lock In Calculated Scope <i class="fa-solid fa-arrow-right"></i>
                     </button>
 
-                    <p class="text-[10px] text-center text-gray-500 mt-4">
+                    <p class="text-[10px] text-center text-neutral-400 mt-4">
                         <i class="fa-solid fa-shield-halved text-gold-500/70"></i> Full Commercial License & NDA Included
                     </p>
                 </div>
@@ -525,48 +568,60 @@
         </div>
     </section>
 
+    <!-- ================= IMAGE BANNER 2 =================
+         To add a photo: put your image in an "images" folder next to index.html and name it banner-2.jpg
+         (or change the file name in the style attribute below). Until then a gold-lit dark background shows. -->
+    <section class="banner" style="--banner-img: url('images/banner-2.jpg');">
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <div class="text-[11px] uppercase tracking-[0.3em] text-gold-400 font-bold mb-4 hero-text-shadow">Video & Social</div>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight mb-4 hero-text-shadow">Short videos and social media, handled for you.</h2>
+            <p class="text-sm sm:text-base text-gray-100 font-light leading-relaxed mb-8 hero-text-shadow">20-second ads and set-up channels that show people what you do.</p>
+            <button onclick="openModal('Banner Consultation')" class="gold-btn px-8 py-3.5 rounded-xl text-xs font-extrabold tracking-widest uppercase">Book a consultation</button>
+        </div>
+    </section>
+
     <!-- ================= 4-STEP PROCESS TIMELINE ================= -->
-    <section id="workflow" class="py-24 px-4 bg-carbon-900 relative">
+    <section id="workflow" class="py-24 px-4 bg-neutral-50 relative">
         <div class="max-w-6xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Seamless Workflow</h2>
-                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">4-Step Execution Process</p>
-                <p class="text-gray-400 text-sm mt-2">How we transform your business goals into high-converting assets in days.</p>
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-600 font-bold mb-3">Seamless Workflow</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900">4-Step Execution Process</p>
+                <p class="text-neutral-500 text-sm mt-2">How we transform your business goals into high-converting assets in days.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <!-- Step 1 -->
-                <div class="glass-card rounded-2xl p-6 relative gold-border-glow">
+                <div class="light-card rounded-2xl p-6 relative gold-border-glow">
                     <div class="text-3xl font-serif font-black gold-gradient-text mb-4">01</div>
-                    <h3 class="text-base font-bold text-white mb-2">Discovery Brief</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">
+                    <h3 class="text-base font-bold text-neutral-900 mb-2">Discovery Brief</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">
                         We map your brand position, competitors, key value drivers, and target audiences.
                     </p>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="glass-card rounded-2xl p-6 relative gold-border-glow">
+                <div class="light-card rounded-2xl p-6 relative gold-border-glow">
                     <div class="text-3xl font-serif font-black gold-gradient-text mb-4">02</div>
-                    <h3 class="text-base font-bold text-white mb-2">Development & Editing</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">
+                    <h3 class="text-base font-bold text-neutral-900 mb-2">Development & Editing</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">
                         Engineers write custom web components while video teams render 20-second viral ad cuts.
                     </p>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="glass-card rounded-2xl p-6 relative gold-border-glow">
+                <div class="light-card rounded-2xl p-6 relative gold-border-glow">
                     <div class="text-3xl font-serif font-black gold-gradient-text mb-4">03</div>
-                    <h3 class="text-base font-bold text-white mb-2">Social Launch</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">
+                    <h3 class="text-base font-bold text-neutral-900 mb-2">Social Launch</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">
                         Channels are created or optimized, tracking pixels set up, and content schedules primed.
                     </p>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="glass-card rounded-2xl p-6 relative gold-border-glow">
+                <div class="light-card rounded-2xl p-6 relative gold-border-glow">
                     <div class="text-3xl font-serif font-black gold-gradient-text mb-4">04</div>
-                    <h3 class="text-base font-bold text-white mb-2">Transfer & Scale</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">
+                    <h3 class="text-base font-bold text-neutral-900 mb-2">Transfer & Scale</h3>
+                    <p class="text-xs text-neutral-500 leading-relaxed">
                         Full admin rights, raw source files, and campaign dashboards are handed over.
                     </p>
                 </div>
@@ -574,44 +629,56 @@
         </div>
     </section>
 
+    <!-- ================= IMAGE BANNER 3 =================
+         To add a photo: put your image in an "images" folder next to index.html and name it banner-3.jpg
+         (or change the file name in the style attribute below). Until then a gold-lit dark background shows. -->
+    <section class="banner" style="--banner-img: url('images/banner-3.jpg');">
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <div class="text-[11px] uppercase tracking-[0.3em] text-gold-400 font-bold mb-4 hero-text-shadow">Get started</div>
+            <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white leading-tight mb-4 hero-text-shadow">Ready to get your business online?</h2>
+            <p class="text-sm sm:text-base text-gray-100 font-light leading-relaxed mb-8 hero-text-shadow">Tell us about your business and we'll send you a clear proposal.</p>
+            <button onclick="openModal('Proposal Request')" class="gold-btn px-8 py-3.5 rounded-xl text-xs font-extrabold tracking-widest uppercase">Request a proposal</button>
+        </div>
+    </section>
+
     <!-- ================= FAQ ACCORDION ================= -->
-    <section id="faq" class="py-24 px-4 bg-carbon-950 relative border-t border-white/5">
+    <section id="faq" class="py-24 px-4 bg-white relative border-t border-neutral-200">
         <div class="max-w-4xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Clear Answers</h2>
-                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Frequently Asked Questions</p>
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-600 font-bold mb-3">Clear Answers</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-neutral-900">Frequently Asked Questions</p>
             </div>
 
             <div class="space-y-4">
                 <!-- FAQ 1 -->
-                <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
-                    <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-sm focus:outline-none">
+                <div class="light-card rounded-2xl overflow-hidden border border-neutral-200">
+                    <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex justify-between items-center text-neutral-900 font-semibold text-sm focus:outline-none">
                         <span>How quickly can QORTEX deploy my website and short-form video ads?</span>
                         <i id="faq-icon-1" class="fa-solid fa-chevron-down text-gold-500 transition-transform"></i>
                     </button>
-                    <div id="faq-answer-1" class="hidden px-6 pb-6 text-xs text-gray-300 leading-relaxed border-t border-white/5 pt-4">
+                    <div id="faq-answer-1" class="hidden px-6 pb-6 text-xs text-neutral-600 leading-relaxed border-t border-neutral-200 pt-4">
                         Standard builds and video ad packages are typically delivered in 5 to 7 business days. If you select our 72-Hour Priority Sprint option in the calculator, we assign a dedicated senior team to complete delivery within 3 days.
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
-                    <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-sm focus:outline-none">
+                <div class="light-card rounded-2xl overflow-hidden border border-neutral-200">
+                    <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex justify-between items-center text-neutral-900 font-semibold text-sm focus:outline-none">
                         <span>What video formats and aspect ratios will I receive?</span>
                         <i id="faq-icon-2" class="fa-solid fa-chevron-down text-gold-500 transition-transform"></i>
                     </button>
-                    <div id="faq-answer-2" class="hidden px-6 pb-6 text-xs text-gray-300 leading-relaxed border-t border-white/5 pt-4">
+                    <div id="faq-answer-2" class="hidden px-6 pb-6 text-xs text-neutral-600 leading-relaxed border-t border-neutral-200 pt-4">
                         All videos are delivered in vertical 9:16 HD (1080x1920) optimized for TikTok, Instagram Reels, and YouTube Shorts, alongside 1:1 square renders for Facebook and feed placements.
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
-                    <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-sm focus:outline-none">
+                <div class="light-card rounded-2xl overflow-hidden border border-neutral-200">
+                    <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex justify-between items-center text-neutral-900 font-semibold text-sm focus:outline-none">
                         <span>Do I own full commercial rights and code after completion?</span>
                         <i id="faq-icon-3" class="fa-solid fa-chevron-down text-gold-500 transition-transform"></i>
                     </button>
-                    <div id="faq-answer-3" class="hidden px-6 pb-6 text-xs text-gray-300 leading-relaxed border-t border-white/5 pt-4">
+                    <div id="faq-answer-3" class="hidden px-6 pb-6 text-xs text-neutral-600 leading-relaxed border-t border-neutral-200 pt-4">
                         Yes, 100%. Upon final delivery, all custom code, project repositories, video master renders, and platform admin accounts are fully transferred to your company.
                     </div>
                 </div>
@@ -645,34 +712,34 @@
 
     <!-- ================= CONSULTATION MODAL ================= -->
     <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-        <div class="glass-card w-full max-w-lg rounded-2xl p-6 sm:p-8 border border-gold-500/40 relative text-left">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+        <div class="light-card w-full max-w-lg rounded-2xl p-6 sm:p-8 border border-gold-500/40 relative text-left">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-neutral-500 hover:text-neutral-900 text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <h3 class="text-2xl font-serif font-bold text-white mb-1">Book Consultation</h3>
-            <p class="text-xs text-gold-400 mb-6">Initiate your project scope with the QORTEX technical team.</p>
+            <h3 class="text-2xl font-serif font-bold text-neutral-900 mb-1">Book Consultation</h3>
+            <p class="text-xs text-gold-700 mb-6">Initiate your project scope with the QORTEX technical team.</p>
 
             <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
                 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
                 <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-1">Your Name *</label>
-                    <input type="text" name="name" required placeholder="Alex Mercer" class="w-full bg-carbon-900 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:border-gold-500 outline-none">
+                    <label class="block text-xs font-semibold text-neutral-600 mb-1">Your Name *</label>
+                    <input type="text" name="name" required placeholder="Alex Mercer" class="w-full bg-neutral-100 border border-neutral-200 rounded-xl px-4 py-3 text-xs text-neutral-900 focus:border-gold-500 outline-none">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-1">Work Email *</label>
-                    <input type="email" name="email" required placeholder="alex@company.com" class="w-full bg-carbon-900 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:border-gold-500 outline-none">
+                    <label class="block text-xs font-semibold text-neutral-600 mb-1">Work Email *</label>
+                    <input type="email" name="email" required placeholder="alex@company.com" class="w-full bg-neutral-100 border border-neutral-200 rounded-xl px-4 py-3 text-xs text-neutral-900 focus:border-gold-500 outline-none">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-1">Selected Package / Scope</label>
-                    <input type="text" id="modalScopeInput" name="package" readonly class="w-full bg-carbon-850 border border-gold-500/30 rounded-xl px-4 py-3 text-xs text-gold-300 font-semibold outline-none cursor-not-allowed">
+                    <label class="block text-xs font-semibold text-neutral-600 mb-1">Selected Package / Scope</label>
+                    <input type="text" id="modalScopeInput" name="package" readonly class="w-full bg-neutral-100 border border-gold-500/30 rounded-xl px-4 py-3 text-xs text-gold-800 font-semibold outline-none cursor-not-allowed">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-gray-300 mb-1">Project Details or Goal Notes</label>
-                    <textarea name="message" rows="3" placeholder="Tell us about your brand, website goals, or target audience..." class="w-full bg-carbon-900 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:border-gold-500 outline-none"></textarea>
+                    <label class="block text-xs font-semibold text-neutral-600 mb-1">Project Details or Goal Notes</label>
+                    <textarea name="message" rows="3" placeholder="Tell us about your brand, website goals, or target audience..." class="w-full bg-neutral-100 border border-neutral-200 rounded-xl px-4 py-3 text-xs text-neutral-900 focus:border-gold-500 outline-none"></textarea>
                 </div>
 
                 <button type="submit" id="submitBtn" class="gold-btn w-full py-3.5 rounded-xl text-xs uppercase tracking-widest font-extrabold mt-2">
@@ -713,14 +780,14 @@
             const btns = document.querySelectorAll('.service-tab-btn');
 
             btns.forEach(btn => {
-                btn.classList.remove('border-gold-500', 'text-gold-400');
-                btn.classList.add('border-white/10', 'text-gray-400');
+                btn.classList.remove('border-gold-500', 'text-gold-700');
+                btn.classList.add('border-neutral-200', 'text-neutral-500');
             });
 
             const activeBtn = document.getElementById(`btn-${category}`);
             if (activeBtn) {
-                activeBtn.classList.remove('border-white/10', 'text-gray-400');
-                activeBtn.classList.add('border-gold-500', 'text-gold-400');
+                activeBtn.classList.remove('border-neutral-200', 'text-neutral-500');
+                activeBtn.classList.add('border-gold-500', 'text-gold-700');
             }
 
             cards.forEach(card => {
@@ -793,19 +860,19 @@
 
             if (webVal > 0) {
                 const webText = document.getElementById('webDevSelect').options[document.getElementById('webDevSelect').selectedIndex].text;
-                summaryList.innerHTML += `<div class="flex justify-between"><span>Web Scope:</span> <span class="font-bold text-white">${webText.split('(')[0]}</span></div>`;
+                summaryList.innerHTML += `<div class="flex justify-between"><span>Web Scope:</span> <span class="font-bold text-neutral-900">${webText.split('(')[0]}</span></div>`;
             }
             if (videoCount > 0) {
-                summaryList.innerHTML += `<div class="flex justify-between"><span>20-Sec Video Ads:</span> <span class="font-bold text-white">${videoCount} Videos${includedVideos > 0 ? ` (${Math.min(includedVideos, videoCount)} included)` : ''}</span></div>`;
+                summaryList.innerHTML += `<div class="flex justify-between"><span>20-Sec Video Ads:</span> <span class="font-bold text-neutral-900">${videoCount} Videos${includedVideos > 0 ? ` (${Math.min(includedVideos, videoCount)} included)` : ''}</span></div>`;
             }
             if (socialSetup) {
-                summaryList.innerHTML += `<div class="flex justify-between"><span>Channel Creation:</span> <span class="font-bold text-white">Included</span></div>`;
+                summaryList.innerHTML += `<div class="flex justify-between"><span>Channel Creation:</span> <span class="font-bold text-neutral-900">Included</span></div>`;
             }
             if (socialMgmt) {
-                summaryList.innerHTML += `<div class="flex justify-between"><span>Monthly Management:</span> <span class="font-bold text-white">${gbp(mgmtTotal)}/mo</span></div>`;
+                summaryList.innerHTML += `<div class="flex justify-between"><span>Monthly Management:</span> <span class="font-bold text-neutral-900">${gbp(mgmtTotal)}/mo</span></div>`;
             }
             if (rushDelivery) {
-                summaryList.innerHTML += `<div class="flex justify-between text-gold-400"><span>72h Priority Delivery:</span> <span class="font-bold">+25% Sprint</span></div>`;
+                summaryList.innerHTML += `<div class="flex justify-between text-gold-700"><span>72h Priority Delivery:</span> <span class="font-bold">+25% Sprint</span></div>`;
             }
         }
 
