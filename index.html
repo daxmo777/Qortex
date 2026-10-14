@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qortex Archives | Bespoke Digital Craftsmen</title>
+    <title>QORTEX ARCHIVES — High-Performance Digital Empire Builder</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,883 +12,871 @@
             theme: {
                 extend: {
                     colors: {
-                        obsidian: {
-                            DEFAULT: '#08080a',
-                            surface: '#0d0e12',
-                            card: '#13151b',
-                            border: '#222530',
-                        },
                         gold: {
-                            light: '#e6c88b',
-                            DEFAULT: '#c5a059',
-                            dark: '#9a7836',
+                            100: '#fef9e7',
+                            200: '#fcf0c3',
+                            300: '#f9e394',
+                            400: '#f4d25f',
+                            500: '#d4af37', // Metallic Luxury Gold Primary
+                            600: '#aa8625',
+                            700: '#806019',
+                            800: '#58400f',
+                            900: '#342406',
                         },
-                        platinum: '#e2e8f0',
+                        carbon: {
+                            950: '#07080a',
+                            900: '#0d0f14',
+                            850: '#13161f',
+                            800: '#1a1e2a',
+                            700: '#262c3d',
+                            600: '#363e54',
+                        }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                        serif: ['Cinzel', 'Georgia', 'serif'],
-                    },
-                    letterSpacing: {
-                        widest2x: '0.25em',
-                        widest3x: '0.35em',
-                    },
-                    animation: {
-                        'shimmer': 'shimmer 3s linear infinite',
-                        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        shimmer: {
-                            '0%': { backgroundPosition: '-200% 0' },
-                            '100%': { backgroundPosition: '200% 0' },
-                        },
-                        pulseGlow: {
-                            '0%, 100%': { opacity: '0.3' },
-                            '50%': { opacity: '0.6' },
-                        }
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif']
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts: Inter & Cinzel for Luxury Automotive Styling -->
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        /* Custom Aston Martin Inspired Luxury Styles */
         body {
-            background-color: #08080a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #07080a;
             color: #e2e8f0;
-            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, .font-cinzel {
-            font-family: 'Cinzel', serif;
-        }
-
-        /* Subtle metallic line border effect */
-        .gold-border-gradient {
-            border-image: linear-gradient(to right, rgba(197, 160, 89, 0), rgba(197, 160, 89, 0.4), rgba(197, 160, 89, 0)) 1;
-        }
-
-        .gold-glow {
-            box-shadow: 0 0 30px -5px rgba(197, 160, 89, 0.15);
-        }
-
-        .gold-glow-hover:hover {
-            box-shadow: 0 0 45px -5px rgba(197, 160, 89, 0.3);
-        }
-
-        .gold-text-gradient {
-            background: linear-gradient(135deg, #f3e5c8 0%, #c5a059 50%, #9a7836 100%);
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff3c4 0%, #f4d25f 30%, #d4af37 70%, #aa8625 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .glass-luxury {
-            background: rgba(13, 14, 18, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.07);
+        .gold-border-glow {
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.08);
+            transition: all 0.3s ease;
         }
 
-        /* Smooth image zoom effect */
-        .zoom-img {
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        .gold-border-glow:hover {
+            border-color: rgba(212, 175, 55, 0.65);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.25);
         }
-        .zoom-container:hover .zoom-img {
-            transform: scale(1.04);
+
+        .glass-card {
+            background: rgba(13, 15, 20, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(7, 8, 10, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .video-background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .video-background-container video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            filter: brightness(1) contrast(1.05);
+        }
+
+        .hero-text-shadow {
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 4px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-glass-box {
+            background: rgba(7, 8, 10, 0.45);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
         }
 
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
-            width: 6px;
+            width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #08080a;
+            background: #07080a;
         }
         ::-webkit-scrollbar-thumb {
-            background: #222530;
-            border-radius: 3px;
+            background: #1e2433;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #c5a059;
+            background: #d4af37;
+        }
+
+        .gold-btn {
+            background: linear-gradient(135deg, #f4d25f 0%, #d4af37 50%, #aa8625 100%);
+            color: #07080a;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .gold-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+            filter: brightness(1.1);
+        }
+
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #d4af37;
+            cursor: pointer;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.9);
         }
     </style>
 </head>
-<body class="selection:bg-gold/30 selection:text-white relative">
+<body class="antialiased selection:bg-gold-500 selection:text-black">
 
-    <!-- Background Dynamic Particle Canvas -->
-    <canvas id="bg-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
-
-    <!-- Luxury Navigation Header -->
-    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300" id="main-nav">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-            <div class="glass-luxury rounded-none sm:rounded-full px-6 py-4 flex items-center justify-between border-b sm:border border-white/10 shadow-2xl">
-                
-                <!-- Brand Logo -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-8 h-8 rounded-sm bg-gradient-to-br from-gold-light via-gold to-gold-dark flex items-center justify-center p-0.5 transition-transform duration-500 group-hover:rotate-180">
-                        <div class="w-full h-full bg-obsidian flex items-center justify-center">
-                            <span class="text-gold font-cinzel font-bold text-xs">Q</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-cinzel tracking-widest2x text-sm sm:text-base font-semibold text-white group-hover:text-gold transition-colors">QORTEX</span>
-                        <span class="text-[9px] tracking-widest3x text-slate-400 uppercase -mt-1 font-light">ARCHIVES</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation Menu -->
-                <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase text-slate-300">
-                    <a href="#hero" class="hover:text-gold transition-colors duration-300">Overview</a>
-                    <a href="#archive" class="hover:text-gold transition-colors duration-300">The Archive</a>
-                    <a href="#services" class="hover:text-gold transition-colors duration-300">Capabilities</a>
-                    <a href="#transformation" class="hover:text-gold transition-colors duration-300">Studio</a>
-                </nav>
-
-                <!-- Actions -->
-                <div class="flex items-center gap-4">
-                    <a href="#contact" class="hidden sm:inline-flex items-center justify-center text-xs tracking-widest uppercase font-semibold text-obsidian bg-gradient-to-r from-gold-light via-gold to-gold-dark px-6 py-2.5 rounded-sm hover:brightness-110 transition-all duration-300 gold-glow">
-                        Enquire
-                    </a>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
-                    </button>
+    <!-- ================= HEADER NAVIGATION ================= -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl border border-gold-500/40 bg-carbon-900 flex items-center justify-center shadow-lg shadow-gold-500/10 group-hover:border-gold-400 transition-colors">
+                    <span class="font-serif text-2xl font-bold gold-gradient-text">Q</span>
                 </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-xl tracking-widest text-white leading-none">QORTEX</span>
+                    <span class="text-[9px] tracking-[0.35em] text-gold-500 font-bold uppercase mt-1">ARCHIVES</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold">
+                <a href="#services" class="text-gray-300 hover:text-gold-400 transition-colors">Services</a>
+                <a href="#bundles" class="text-gray-300 hover:text-gold-400 transition-colors">Bundles</a>
+                <a href="#calculator" class="text-gray-300 hover:text-gold-400 transition-colors">Price Calculator</a>
+                <a href="#workflow" class="text-gray-300 hover:text-gold-400 transition-colors">Process</a>
+                <a href="#faq" class="text-gray-300 hover:text-gold-400 transition-colors">FAQ</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <button onclick="openModal('Direct Consultation')" class="gold-btn px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold">
+                    Book Consultation
+                </button>
             </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-white p-2 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
         </div>
 
-        <!-- Mobile Drawer -->
-        <div id="mobile-drawer" class="hidden md:hidden glass-luxury border-b border-white/10 px-6 py-6 space-y-4 text-center">
-            <a href="#hero" class="block text-xs uppercase tracking-widest text-slate-300 hover:text-gold transition-colors py-2">Overview</a>
-            <a href="#archive" class="block text-xs uppercase tracking-widest text-slate-300 hover:text-gold transition-colors py-2">The Archive</a>
-            <a href="#services" class="block text-xs uppercase tracking-widest text-slate-300 hover:text-gold transition-colors py-2">Capabilities</a>
-            <a href="#transformation" class="block text-xs uppercase tracking-widest text-slate-300 hover:text-gold transition-colors py-2">Studio</a>
-            <a href="#contact" class="block text-xs uppercase tracking-widest font-semibold text-gold border border-gold/40 py-2.5 rounded-sm hover:bg-gold/10">Enquire Now</a>
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass-card border-b border-gold-500/20 px-6 py-6 flex flex-col gap-4">
+            <a href="#services" onclick="toggleMobileMenu()" class="text-gray-200 hover:text-gold-400 font-medium text-sm py-1">Services</a>
+            <a href="#bundles" onclick="toggleMobileMenu()" class="text-gray-200 hover:text-gold-400 font-medium text-sm py-1">Featured Bundles</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="text-gray-200 hover:text-gold-400 font-medium text-sm py-1">Interactive Price Calculator</a>
+            <a href="#workflow" onclick="toggleMobileMenu()" class="text-gray-200 hover:text-gold-400 font-medium text-sm py-1">Process Blueprint</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="text-gray-200 hover:text-gold-400 font-medium text-sm py-1">FAQ</a>
+            <button onclick="toggleMobileMenu(); openModal('Mobile Hero Consult')" class="gold-btn w-full py-3 rounded-xl text-xs uppercase tracking-wider mt-2 font-bold">
+                Book Strategy Call
+            </button>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden z-10">
-        
-        <!-- Ambient Radial Glows -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gold/10 rounded-full blur-[140px] pointer-events-none animate-pulse-glow"></div>
+    <!-- ================= HERO SECTION WITH VIDEO BG ================= -->
+    <section id="hero" class="relative min-h-screen flex items-end justify-center pt-24 pb-10 px-4 overflow-hidden">
+        <!-- Live MP4 Background Video -->
+        <div class="video-background-container">
+            <video autoplay loop muted playsinline preload="auto">
+                <source src="https://videotourl.com/videos/1791964700164-6025643f-3008-4d61-951c-b300c3fbd2a4.mp4" type="video/mp4">
+                Your browser does not support HTML5 video background.
+            </video>
+            <!-- Lightened Overlay Gradient so background video remains crisp and bright -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <div class="absolute top-0 left-0 w-full h-28 bg-gradient-to-b from-black/50 to-transparent"></div>
+        </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="flex flex-col items-center text-center space-y-8">
-                
-                <!-- Category Tag Header -->
-                <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-gold/30 bg-obsidian-surface/60 backdrop-blur-md">
-                    <span class="w-1.5 h-1.5 rounded-full bg-gold animate-ping"></span>
-                    <span class="text-[10px] sm:text-xs font-medium tracking-widest3x text-gold uppercase">Digital Craftsmanship & Archives</span>
-                </div>
+        <div class="relative z-10 max-w-3xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-gold-500/50 mb-4 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+                <span class="text-[11px] uppercase tracking-[0.25em] text-gold-300 font-bold">High-Performance Media & Dev</span>
+            </div>
 
-                <!-- Main Tagline Headline -->
-                <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-cinzel font-bold tracking-tight text-white max-w-5xl leading-[1.08]">
-                    CRAFTSMANSHIP. <br class="hidden sm:inline" />
-                    <span class="gold-text-gradient italic font-normal">REMODERNIZED.</span>
-                </h1>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight mb-3 hero-text-shadow">
+                BUILDING HIGH-SCALE <br>
+                <span class="gold-gradient-text">DIGITAL EMPIRES</span>
+            </h1>
 
-                <!-- Subheadline -->
-                <p class="text-sm sm:text-base md:text-lg text-slate-400 max-w-2xl font-light tracking-wide leading-relaxed">
-                    We sculpt bespoke digital experiences, high-converting video adverts, and modern web architecture for brands that demand perfection.
-                </p>
+            <p class="text-sm sm:text-base text-gray-100 max-w-2xl mx-auto font-light leading-relaxed mb-6 hero-text-shadow">
+                Bespoke high-conversion web architectures, high-impact 20-second viral short-form video ad bundles, and turnkey social media deployments for luxury brands and scale-ups.
+            </p>
 
-                <!-- Dual Action Buttons -->
-                <div class="flex flex-col sm:flex-row items-center gap-5 pt-4 w-full sm:w-auto">
-                    <a href="#archive" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 text-xs tracking-widest uppercase font-semibold text-obsidian bg-gradient-to-r from-gold-light via-gold to-gold-dark px-8 py-4 rounded-sm hover:brightness-110 transition-all duration-300 gold-glow hover:-translate-y-0.5">
-                        <span>Explore Archive</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-
-                    <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 text-xs tracking-widest uppercase font-medium text-slate-200 border border-white/20 bg-obsidian-card/50 hover:bg-white/5 hover:border-gold/50 px-8 py-4 rounded-sm transition-all duration-300 backdrop-blur-sm">
-                        <span>Request Redesign</span>
-                    </a>
-                </div>
-
-                <!-- Featured Hero Showcase Display (Interactive Artwork Container) -->
-                <div class="w-full pt-12 sm:pt-16">
-                    <div class="relative mx-auto max-w-5xl rounded-sm border border-gold/20 bg-obsidian-card/80 p-2 sm:p-3 shadow-2xl gold-glow zoom-container cursor-pointer group" id="hero-artwork-trigger">
-                        
-                        <!-- Top Chrome / Accent Bar -->
-                        <div class="flex items-center justify-between px-4 py-2.5 bg-obsidian border-b border-white/5 text-slate-400 text-xs">
-                            <div class="flex items-center space-x-2">
-                                <span class="w-2 h-2 rounded-full bg-rose-500/60"></span>
-                                <span class="w-2 h-2 rounded-full bg-amber-500/60"></span>
-                                <span class="w-2 h-2 rounded-full bg-emerald-500/60"></span>
-                            </div>
-                            <div class="font-mono text-[10px] tracking-widest uppercase text-slate-500 flex items-center gap-1.5">
-                                <i data-lucide="shield-check" class="w-3 h-3 text-gold"></i>
-                                <span>ARCHIVE REF // QA-2026-X</span>
-                            </div>
-                            <div class="text-[10px] text-gold tracking-widest uppercase flex items-center gap-1">
-                                <i data-lucide="maximize-2" class="w-3 h-3"></i>
-                                <span class="hidden sm:inline">Inspect Artwork</span>
-                            </div>
-                        </div>
-
-                        <!-- Hero Feature Image Display -->
-                        <div class="relative overflow-hidden aspect-[2527/1277] bg-obsidian">
-                            <img 
-                                src="https://github.com/user-attachments/assets/a12a9fbd-ef16-4c45-ba37-9207f21e4bb0" 
-                                alt="Qortex Archives Featured Showcase Interface" 
-                                class="w-full h-full object-cover zoom-img opacity-95 group-hover:opacity-100 transition-opacity"
-                            />
-                            
-                            <!-- Vignette & Light Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-60"></div>
-                            
-                            <!-- Interactive Hover Badge -->
-                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-obsidian/40 backdrop-blur-xs">
-                                <div class="glass-luxury px-6 py-3 rounded-none border border-gold/40 text-gold text-xs tracking-widest uppercase font-semibold flex items-center gap-3 shadow-2xl">
-                                    <i data-lucide="zoom-in" class="w-4 h-4"></i>
-                                    <span>Expand High-Res Archive</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Bottom Metrics Strip -->
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-obsidian-surface border-t border-white/5 text-left text-xs">
-                            <div>
-                                <p class="text-[10px] uppercase tracking-widest text-slate-500">Platform Performance</p>
-                                <p class="font-cinzel text-sm text-gold font-semibold">99.8% PageSpeed</p>
-                            </div>
-                            <div>
-                                <p class="text-[10px] uppercase tracking-widest text-slate-500">Architecture</p>
-                                <p class="font-cinzel text-sm text-slate-200 font-semibold">NextGen Headless</p>
-                            </div>
-                            <div>
-                                <p class="text-[10px] uppercase tracking-widest text-slate-500">Ad Conversion</p>
-                                <p class="font-cinzel text-sm text-gold font-semibold">+340% Uplift</p>
-                            </div>
-                            <div>
-                                <p class="text-[10px] uppercase tracking-widest text-slate-500">Craftsmanship</p>
-                                <p class="font-cinzel text-sm text-slate-200 font-semibold">Bespoke Design</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#calculator" class="w-full sm:w-auto gold-btn px-6 py-3 rounded-xl text-xs font-extrabold tracking-widest uppercase flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-calculator"></i> Custom Price Calculator
+                </a>
+                <button onclick="openModal('Hero Quick Consult')" class="w-full sm:w-auto bg-black/60 backdrop-blur-md hover:bg-carbon-800/80 text-white border border-gold-500/50 px-6 py-3 rounded-xl text-xs font-bold tracking-widest uppercase transition-all hover:border-gold-400">
+                    Request Strategic Proposal
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- ARCHIVE SHOWCASE (FILTERABLE PORTFOLIO) -->
-    <section id="archive" class="py-24 bg-obsidian-surface relative z-10 border-t border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Title -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-white/10 pb-8">
-                <div>
-                    <span class="text-[10px] tracking-widest3x uppercase text-gold font-semibold">Curation Catalog</span>
-                    <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-1">THE ARCHIVE SHOWCASE</h2>
-                </div>
-                <p class="text-xs text-slate-400 max-w-md mt-4 md:mt-0 font-light leading-relaxed">
-                    Explore recently modernized web applications, cinematic social adverts, and identity revamps crafted for small businesses and niche brands.
-                </p>
+    <!-- ================= SERVICES CORE WITH FILTER TABS ================= -->
+    <section id="services" class="py-24 px-4 bg-carbon-950 relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Core Capabilities</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Precision Digital Solutions</p>
+                <p class="text-gray-400 text-sm mt-3">From custom full-stack web builds to viral video creatives engineered for max conversion.</p>
             </div>
 
             <!-- Filter Buttons -->
-            <div class="flex flex-wrap items-center gap-2 sm:gap-4 mb-10">
-                <button class="archive-filter-btn active text-xs tracking-widest uppercase px-5 py-2.5 border border-gold bg-gold/10 text-gold transition-all" data-filter="all">All Archives</button>
-                <button class="archive-filter-btn text-xs tracking-widest uppercase px-5 py-2.5 border border-white/10 bg-obsidian-card text-slate-400 hover:text-white hover:border-white/30 transition-all" data-filter="website">Website Redesigns</button>
-                <button class="archive-filter-btn text-xs tracking-widest uppercase px-5 py-2.5 border border-white/10 bg-obsidian-card text-slate-400 hover:text-white hover:border-white/30 transition-all" data-filter="social">Social Media Video Ads</button>
-                <button class="archive-filter-btn text-xs tracking-widest uppercase px-5 py-2.5 border border-white/10 bg-obsidian-card text-slate-400 hover:text-white hover:border-white/30 transition-all" data-filter="identity">Brand Identity</button>
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <button onclick="filterServices('all')" id="btn-all" class="service-tab-btn active glass-card border border-gold-500 px-5 py-2 rounded-full text-xs font-semibold text-gold-400">All Solutions</button>
+                <button onclick="filterServices('web')" id="btn-web" class="service-tab-btn glass-card border border-white/10 px-5 py-2 rounded-full text-xs font-semibold text-gray-400 hover:text-white">Web Development</button>
+                <button onclick="filterServices('video')" id="btn-video" class="service-tab-btn glass-card border border-white/10 px-5 py-2 rounded-full text-xs font-semibold text-gray-400 hover:text-white">20-Sec Video Ads</button>
+                <button onclick="filterServices('social')" id="btn-social" class="service-tab-btn glass-card border border-white/10 px-5 py-2 rounded-full text-xs font-semibold text-gray-400 hover:text-white">Social Architecture</button>
             </div>
 
-            <!-- Portfolio Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="archive-grid">
-                
-                <!-- Card 1: Website -->
-                <div class="archive-card zoom-container bg-obsidian-card border border-white/10 overflow-hidden group cursor-pointer transition-all duration-500 hover:border-gold/40" data-category="website" data-title="Valenti Watchmaker - Web Experience" data-video="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ">
-                    <div class="relative aspect-video overflow-hidden bg-obsidian">
-                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="Valenti Watchmaker" class="w-full h-full object-cover zoom-img opacity-80 group-hover:opacity-100">
-                        <div class="absolute top-3 left-3 bg-obsidian/90 text-gold text-[9px] tracking-widest uppercase px-2.5 py-1 border border-gold/30">
-                            Website Redesign
-                        </div>
-                        <div class="absolute inset-0 bg-obsidian/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="p-3 rounded-full bg-gold/20 text-gold border border-gold/50"><i data-lucide="eye" class="w-5 h-5"></i></span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between text-[10px] tracking-widest uppercase text-slate-500 mb-2">
-                            <span>Heritage Horology</span>
-                            <span class="text-emerald-400">+210% Inquiries</span>
-                        </div>
-                        <h3 class="text-lg font-cinzel font-bold text-white group-hover:text-gold transition-colors">VALENTI ATELIER</h3>
-                        <p class="text-xs text-slate-400 mt-2 font-light">Legacy watchmaker site modernized into a high-speed, immersive luxury storefront.</p>
-                    </div>
-                </div>
-
-                <!-- Card 2: Social Video Ad -->
-                <div class="archive-card zoom-container bg-obsidian-card border border-white/10 overflow-hidden group cursor-pointer transition-all duration-500 hover:border-gold/40" data-category="social" data-title="Apex Performance - TikTok & Instagram Campaign" data-video="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ">
-                    <div class="relative aspect-video overflow-hidden bg-obsidian">
-                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Apex Performance" class="w-full h-full object-cover zoom-img opacity-80 group-hover:opacity-100">
-                        <div class="absolute top-3 left-3 bg-obsidian/90 text-gold text-[9px] tracking-widest uppercase px-2.5 py-1 border border-gold/30">
-                            Social Media Video Ad
-                        </div>
-                        <div class="absolute inset-0 bg-obsidian/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="p-3 rounded-full bg-gold/20 text-gold border border-gold/50"><i data-lucide="play" class="w-5 h-5"></i></span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between text-[10px] tracking-widest uppercase text-slate-500 mb-2">
-                            <span>Fitness & Athletics</span>
-                            <span class="text-gold">1.4M Impressions</span>
-                        </div>
-                        <h3 class="text-lg font-cinzel font-bold text-white group-hover:text-gold transition-colors">APEX DYNAMIC REELS</h3>
-                        <p class="text-xs text-slate-400 mt-2 font-light">High-octane short-form video adverts engineered for viral engagement and sales conversions.</p>
-                    </div>
-                </div>
-
-                <!-- Card 3: Brand Identity & Web -->
-                <div class="archive-card zoom-container bg-obsidian-card border border-white/10 overflow-hidden group cursor-pointer transition-all duration-500 hover:border-gold/40" data-category="identity" data-title="Maison Noir - Luxury Hospitality" data-video="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ">
-                    <div class="relative aspect-video overflow-hidden bg-obsidian">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Maison Noir" class="w-full h-full object-cover zoom-img opacity-80 group-hover:opacity-100">
-                        <div class="absolute top-3 left-3 bg-obsidian/90 text-gold text-[9px] tracking-widest uppercase px-2.5 py-1 border border-gold/30">
-                            Brand Identity
-                        </div>
-                        <div class="absolute inset-0 bg-obsidian/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="p-3 rounded-full bg-gold/20 text-gold border border-gold/50"><i data-lucide="eye" class="w-5 h-5"></i></span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between text-[10px] tracking-widest uppercase text-slate-500 mb-2">
-                            <span>Boutique Hotel</span>
-                            <span class="text-emerald-400">+180% Direct Bookings</span>
-                        </div>
-                        <h3 class="text-lg font-cinzel font-bold text-white group-hover:text-gold transition-colors">MAISON NOIR PARIS</h3>
-                        <p class="text-xs text-slate-400 mt-2 font-light">Complete visual identity overhaul and booking web app for an elite Parisian boutique hotel.</p>
-                    </div>
-                </div>
-
-                <!-- Card 4: Website Redesign -->
-                <div class="archive-card zoom-container bg-obsidian-card border border-white/10 overflow-hidden group cursor-pointer transition-all duration-500 hover:border-gold/40" data-category="website" data-title="Sovereign Coffee - E-Commerce Platform" data-video="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ">
-                    <div class="relative aspect-video overflow-hidden bg-obsidian">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Sovereign Coffee" class="w-full h-full object-cover zoom-img opacity-80 group-hover:opacity-100">
-                        <div class="absolute top-3 left-3 bg-obsidian/90 text-gold text-[9px] tracking-widest uppercase px-2.5 py-1 border border-gold/30">
-                            Website Redesign
-                        </div>
-                        <div class="absolute inset-0 bg-obsidian/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="p-3 rounded-full bg-gold/20 text-gold border border-gold/50"><i data-lucide="eye" class="w-5 h-5"></i></span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between text-[10px] tracking-widest uppercase text-slate-500 mb-2">
-                            <span>Artisanal Coffee</span>
-                            <span class="text-emerald-400">0.8s Load Time</span>
-                        </div>
-                        <h3 class="text-lg font-cinzel font-bold text-white group-hover:text-gold transition-colors">SOVEREIGN ROASTERS</h3>
-                        <p class="text-xs text-slate-400 mt-2 font-light">Custom Shopify headless experience with subscription workflow and ultra-fast checkout.</p>
-                    </div>
-                </div>
-
-                <!-- Card 5: Social Adverts -->
-                <div class="archive-card zoom-container bg-obsidian-card border border-white/10 overflow-hidden group cursor-pointer transition-all duration-500 hover:border-gold/40" data-category="social" data-title="Velox Motors - Cinematic Launch Commercial" data-video="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ">
-                    <div class="relative aspect-video overflow-hidden bg-obsidian">
-                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Velox Motors" class="w-full h-full object-cover zoom-img opacity-80 group-hover:opacity-100">
-                        <div class="absolute top-3 left-3 bg-obsidian/90 text-gold text-[9px] tracking-widest uppercase px-2.5 py-1 border border-gold/30">
-                            Social Media Video Ad
-                        </div>
-                        <div class="absolute inset-0 bg-obsidian/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="p-3 rounded-full bg-gold/20 text-gold border border-gold/50"><i data-lucide="play" class="w-5 h-5"></i></span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between text-[10px] tracking-widest uppercase text-slate-500 mb-2">
-                            <span>Automotive Detailing</span>
-                            <span class="text-gold">4.2x ROAS</span>
-                        </div>
-                        <h3 class="text-lg font-cinzel font-bold text-white group-hover:text-gold transition-colors">VELOX LUXURY DETAILING</h3>
-                        <p class="text-xs text-slate-400 mt-2 font-light">Cinematic targeted video advert series highlighting high-end ceramic coating services.</p>
-                    </div>
-                </div>
-
-                <!-- Card 6: Brand Identity -->
-                <div class="archive-card zoom-container bg-obsidian-card border border-white/10 overflow-hidden group cursor-pointer transition-all duration-500 hover:border-gold/40" data-category="identity" data-title="Aero Private Aviation - Web Showcase" data-video="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ">
-                    <div class="relative aspect-video overflow-hidden bg-obsidian">
-                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80" alt="Aero Jet" class="w-full h-full object-cover zoom-img opacity-80 group-hover:opacity-100">
-                        <div class="absolute top-3 left-3 bg-obsidian/90 text-gold text-[9px] tracking-widest uppercase px-2.5 py-1 border border-gold/30">
-                            Brand Identity
-                        </div>
-                        <div class="absolute inset-0 bg-obsidian/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="p-3 rounded-full bg-gold/20 text-gold border border-gold/50"><i data-lucide="eye" class="w-5 h-5"></i></span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between text-[10px] tracking-widest uppercase text-slate-500 mb-2">
-                            <span>Private Aviation</span>
-                            <span class="text-emerald-400">Global Archive</span>
-                        </div>
-                        <h3 class="text-lg font-cinzel font-bold text-white group-hover:text-gold transition-colors">AERO ARCHIVE PORTAL</h3>
-                        <p class="text-xs text-slate-400 mt-2 font-light">Interactive charter booking interface and digital brand showcase for ultra-high-net-worth clients.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES SUITE -->
-    <section id="services" class="py-24 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[10px] tracking-widest3x uppercase text-gold font-semibold">Core Pillars</span>
-                <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-1">CAPABILITIES & SERVICES</h2>
-                <p class="text-xs text-slate-400 font-light mt-3">Precision digital solutions specifically calibrated for growing small businesses and prestige brands.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="servicesGrid">
                 <!-- Service 1 -->
-                <div class="glass-luxury p-8 border border-white/10 hover:border-gold/40 transition-all duration-500 group relative">
-                    <span class="font-cinzel text-4xl text-gold/30 font-bold group-hover:text-gold/60 transition-colors">01</span>
-                    <h3 class="text-xl font-cinzel font-bold text-white mt-4 mb-3 group-hover:text-gold transition-colors">WEBSITE MODERNIZATION</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light mb-6">
-                        We transform slow, outdated legacy websites into modern, ultra-fast web applications with high conversion architectures and flawless mobile responsiveness.
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-300 font-light">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Sub-second loading speeds</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> High-conversion UI/UX design</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> SEO & mobile optimization</li>
+                <div class="service-card web glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-xl mb-6">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Custom Web Architecture</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            High-speed custom websites built with clean code and zero bloated templates. Engineered for sub-second page loads.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> PageSpeed 95+ Score</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Mobile-First Responsive</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Custom Interactive Logic</li>
                     </ul>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="glass-luxury p-8 border border-white/10 hover:border-gold/40 transition-all duration-500 group relative">
-                    <span class="font-cinzel text-4xl text-gold/30 font-bold group-hover:text-gold/60 transition-colors">02</span>
-                    <h3 class="text-xl font-cinzel font-bold text-white mt-4 mb-3 group-hover:text-gold transition-colors">SOCIAL MEDIA VIDEO ADS</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light mb-6">
-                        Cinematic, high-converting short-form video adverts engineered specifically for TikTok, Instagram Reels, YouTube Shorts, and Meta ad campaigns.
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-300 font-light">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Scriptwriting & Storyboarding</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Motion graphics & Color grading</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Multi-platform ad variations</li>
+                <div class="service-card web glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-xl mb-6">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Web Modifications & UX</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Rapid enhancement and conversion redesign for Shopify, Webflow, WordPress, or React platforms.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Conversion Rate Optimization</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Layout & UI Overhauls</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Technical SEO Audits</li>
                     </ul>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="glass-luxury p-8 border border-white/10 hover:border-gold/40 transition-all duration-500 group relative">
-                    <span class="font-cinzel text-4xl text-gold/30 font-bold group-hover:text-gold/60 transition-colors">03</span>
-                    <h3 class="text-xl font-cinzel font-bold text-white mt-4 mb-3 group-hover:text-gold transition-colors">DIGITAL ARCHIVING</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light mb-6">
-                        Permanent digital showcase catalogs designed for premium small businesses to archive their finest work, products, and client case studies with prestige.
-                    </p>
-                    <ul class="space-y-2 text-xs text-slate-300 font-light">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Interactive digital portfolios</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> High-resolution asset vaults</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i> Luxury client portal integration</li>
+                <div class="service-card video glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-xl mb-6">
+                            <i class="fa-solid fa-clapperboard"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">20-Sec Short Video Ads</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            High-velocity short-form creatives engineered with 3-second viral hooks specifically for TikTok, Reels, and Shorts.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Hook-First Storyboarding</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Motion Graphics & Captions</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Multi-Ratio Exporting</li>
                     </ul>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- THE TRANSFORMATION STUDIO (BEFORE / AFTER COMPARISON) -->
-    <section id="transformation" class="py-24 bg-obsidian-surface border-t border-b border-white/5 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-[10px] tracking-widest3x uppercase text-gold font-semibold">The Remodernization Studio</span>
-                <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-1">THE TRANSFORMATION</h2>
-                <p class="text-xs text-slate-400 font-light mt-3">See the tangible impact of upgrading from an outdated legacy web presence to a Qortex modernized platform.</p>
-            </div>
-
-            <!-- Comparison Interactive Container -->
-            <div class="glass-luxury border border-white/10 p-6 sm:p-10 rounded-none gold-glow max-w-5xl mx-auto">
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    
-                    <!-- Legacy Side -->
-                    <div class="p-6 bg-obsidian border border-rose-900/30 rounded-none relative">
-                        <div class="absolute -top-3 left-4 bg-rose-950/90 text-rose-400 text-[9px] tracking-widest uppercase px-3 py-0.5 border border-rose-800/50">
-                            Legacy Small Business Site
-                        </div>
-                        <div class="space-y-4 pt-2">
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-slate-400">Page Load Speed</span>
-                                <span class="text-rose-400 font-mono">5.8 seconds (Slow)</span>
-                            </div>
-                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
-                                <div class="bg-rose-500 h-full w-[25%]"></div>
-                            </div>
-
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-slate-400">Mobile Responsiveness</span>
-                                <span class="text-rose-400 font-mono">Broken / Cluttered</span>
-                            </div>
-
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-slate-400">Social Video Integration</span>
-                                <span class="text-rose-400 font-mono">None</span>
-                            </div>
-
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-slate-400">Visitor Conversion Rate</span>
-                                <span class="text-rose-400 font-mono">1.2% Average</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modernized Qortex Side -->
-                    <div class="p-6 bg-obsidian border border-gold/40 rounded-none relative">
-                        <div class="absolute -top-3 left-4 bg-gold/20 text-gold text-[9px] tracking-widest uppercase px-3 py-0.5 border border-gold/40">
-                            Qortex Remodernized
-                        </div>
-                        <div class="space-y-4 pt-2">
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-slate-400">Page Load Speed</span>
-                                <span class="text-gold font-mono">0.6 seconds (Ultra)</span>
-                            </div>
-                            <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
-                                <div class="bg-gradient-to-r from-gold-light to-gold h-full w-[95%]"></div>
-                            </div>
-
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-slate-400">Mobile Responsiveness</span>
-                                <span class="text-gold font-mono">Fluid Automotive Polish</span>
-                            </div>
-
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-slate-400">Social Video Integration</span>
-                                <span class="text-gold font-mono">Native HD Reels / Ads</span>
-                            </div>
-
-                            <div class="flex items-center justify-between text-xs">
-                                <span class="text-slate-400">Visitor Conversion Rate</span>
-                                <span class="text-gold font-mono">4.8% (+300% Lift)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="text-center mt-8 pt-6 border-t border-white/5">
-                    <a href="#contact" class="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-gold hover:text-white transition-colors">
-                        <span>Request a free modernization audit for your website</span>
-                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- INQUIRY & AUDIT REQUEST FORM -->
-    <section id="contact" class="py-24 relative z-10">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="glass-luxury p-8 sm:p-12 border border-gold/30 gold-glow relative overflow-hidden">
-                <div class="absolute -top-24 -right-24 w-60 h-60 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-
-                <div class="text-center mb-10">
-                    <span class="text-[10px] tracking-widest3x uppercase text-gold font-semibold">Bespoke Consultations</span>
-                    <h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-white mt-1">START YOUR REMODERNIZATION</h2>
-                    <p class="text-xs text-slate-400 font-light mt-2">Submit your details below for a complimentary website analysis & media strategy proposal.</p>
-                </div>
-
-                <form id="enquiry-form" class="space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-[10px] tracking-widest uppercase text-slate-400 mb-2">Your Name *</label>
-                            <input type="text" required placeholder="e.g. Julian Vance" class="w-full bg-obsidian border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-[10px] tracking-widest uppercase text-slate-400 mb-2">Company / Brand *</label>
-                            <input type="text" required placeholder="e.g. Vance Atelier" class="w-full bg-obsidian border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold transition-colors">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-[10px] tracking-widest uppercase text-slate-400 mb-2">Email Address *</label>
-                            <input type="email" required placeholder="julian@vanceatelier.com" class="w-full bg-obsidian border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold transition-colors">
-                        </div>
-                        <div>
-                            <label class="block text-[10px] tracking-widest uppercase text-slate-400 mb-2">Current Website URL</label>
-                            <input type="url" placeholder="https://vanceatelier.com" class="w-full bg-obsidian border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold transition-colors">
-                        </div>
-                    </div>
-
+                <!-- Service 4 -->
+                <div class="service-card social glass-card rounded-2xl p-6 gold-border-glow flex flex-col justify-between">
                     <div>
-                        <label class="block text-[10px] tracking-widest uppercase text-slate-400 mb-2">Primary Service Interest</label>
-                        <select class="w-full bg-obsidian border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold transition-colors">
-                            <option>Full Website Remodernization</option>
-                            <option>Social Media Video Ad Creation</option>
-                            <option>Digital Archive & Portfolio Showcase</option>
-                            <option>Complete Brand Overhaul Package</option>
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-xl mb-6">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Social Creation & Mgmt</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                            Full channel setup, branding identity, automated post scheduling, and strategic audience growth management.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-gray-300 space-y-2 border-t border-white/10 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Profile Branding & Bios</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Content Publishing Schedule</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500 text-[10px]"></i> Monthly Analytics Reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRE-SET PACKAGES & BUNDLES ================= -->
+    <section id="bundles" class="py-24 px-4 bg-carbon-900 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Website Packages</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Choose Your Website Package</p>
+                <p class="text-gray-400 text-sm mt-3">Three clear 5-page website packages for small businesses, or customize your exact needs below.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tier 1: Starter -->
+                <div class="glass-card rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-gold-500/40 transition-all">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Get Online</span>
+                        <h3 class="text-2xl font-serif font-bold text-white mt-1 mb-2">Starter</h3>
+                        <div class="text-3xl font-bold gold-gradient-text font-serif mb-6">£500</div>
+                        <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 5-Page Website</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Mobile Responsive</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Contact Form</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Basic SEO Setup</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 1 × 20-Sec Video Ad</li>
+                            <li class="flex items-center gap-2 text-gray-500"><i class="fa-solid fa-xmark"></i> Custom Design &amp; Speed Optimization</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Starter Website Package (£500)')" class="w-full glass-card hover:bg-carbon-800 text-white border border-gold-500/30 py-3.5 rounded-xl text-xs uppercase font-bold tracking-widest transition-all">
+                        Select Plan
+                    </button>
+                </div>
+
+                <!-- Tier 2: Standard (Featured) -->
+                <div class="glass-card rounded-2xl p-8 border-2 border-gold-500 relative flex flex-col justify-between shadow-2xl shadow-gold-500/10 scale-105 z-10">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold-500 text-black text-[10px] uppercase tracking-widest font-extrabold px-4 py-1 rounded-full shadow-md">
+                        Most Popular
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-widest text-gold-400 font-bold">Stand Out</span>
+                        <h3 class="text-2xl font-serif font-bold text-white mt-1 mb-2">Standard</h3>
+                        <div class="text-3xl font-bold gold-gradient-text font-serif mb-6">£1,250</div>
+                        <ul class="space-y-3 text-xs text-gray-200 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Everything in Starter</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Fully Custom Design</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Speed Optimization</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 3 × 20-Sec Video Ads</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Google Business Profile Setup</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Copy Polish</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Standard Website Package (£1,250)')" class="w-full gold-btn py-3.5 rounded-xl text-xs uppercase font-extrabold tracking-widest">
+                        Choose Standard
+                    </button>
+                </div>
+
+                <!-- Tier 3: Premium -->
+                <div class="glass-card rounded-2xl p-8 border border-white/10 flex flex-col justify-between hover:border-gold-500/40 transition-all">
+                    <div>
+                        <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold">Win Customers</span>
+                        <h3 class="text-2xl font-serif font-bold text-white mt-1 mb-2">Premium</h3>
+                        <div class="text-3xl font-bold gold-gradient-text font-serif mb-6">£1,900</div>
+                        <ul class="space-y-3 text-xs text-gray-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Everything in Standard</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Full Copywriting for All Pages</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 5 × 20-Sec Video Ads</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Booking or Lead System</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Analytics Setup</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> 30 Days of Support</li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Premium Website Package (£1,900)')" class="w-full glass-card hover:bg-carbon-800 text-white border border-gold-500/30 py-3.5 rounded-xl text-xs uppercase font-bold tracking-widest transition-all">
+                        Select Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= INTERACTIVE ESTIMATOR & CALCULATOR ================= -->
+    <section id="calculator" class="py-24 px-4 bg-carbon-950 relative border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Transparent Costing</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Interactive Scope & Budget Calculator</p>
+                <p class="text-gray-400 text-sm mt-2">Adjust your requirements in real-time to generate your custom project estimate.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Inputs Box -->
+                <div class="lg:col-span-7 glass-card rounded-2xl p-6 sm:p-8 space-y-8 border border-white/10">
+                    
+                    <!-- Web Select -->
+                    <div>
+                        <label class="block text-xs font-bold text-white uppercase tracking-wider mb-3 flex items-center justify-between">
+                            <span><i class="fa-solid fa-laptop-code text-gold-500 mr-2"></i> Web Engineering Scope</span>
+                            <span id="webDevLabel" class="text-gold-400 font-semibold">£1,250</span>
+                        </label>
+                        <select id="webDevSelect" onchange="calculateTotal()" class="w-full bg-carbon-900 border border-white/10 rounded-xl px-4 py-3.5 text-xs text-white focus:border-gold-500 outline-none">
+                            <option value="0" data-videos="0">None / Existing Site Provided</option>
+                            <option value="500" data-videos="1">Starter 5-Page Website (£500) — 1 video included</option>
+                            <option value="1250" data-videos="3" selected>Standard 5-Page Website (£1,250) — 3 videos included</option>
+                            <option value="1900" data-videos="5">Premium 5-Page Website (£1,900) — 5 videos included</option>
+                            <option value="2400" data-videos="0">Full Enterprise Web Application (£2,400)</option>
                         </select>
                     </div>
 
+                    <!-- Video Ads Range -->
                     <div>
-                        <label class="block text-[10px] tracking-widest uppercase text-slate-400 mb-2">Project Brief & Goals</label>
-                        <textarea rows="4" placeholder="Tell us about your current digital challenges, vision, or campaign goals..." class="w-full bg-obsidian border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-gold transition-colors"></textarea>
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-xs font-bold text-white uppercase tracking-wider flex items-center">
+                                <i class="fa-solid fa-video text-gold-500 mr-2"></i> 20-Sec Video Ads Bundle
+                            </label>
+                            <span id="videoCountDisplay" class="text-xs font-bold text-gold-400 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30">
+                                3 Videos (included)
+                            </span>
+                        </div>
+                        <input type="range" id="videoSlider" min="0" max="3" step="1" value="2" oninput="calculateTotal()" class="w-full h-2 bg-carbon-900 rounded-lg appearance-none cursor-pointer slider-thumb">
+                        <div class="flex justify-between text-[10px] text-gray-500 mt-2">
+                            <span>0 videos</span>
+                            <span>1 video</span>
+                            <span>3 videos</span>
+                            <span>6 videos</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400 mt-3">Videos are £50 each. Starter includes 1 video, Standard 3 and Premium 5.</p>
                     </div>
 
-                    <div class="text-center pt-2">
-                        <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 text-xs tracking-widest uppercase font-semibold text-obsidian bg-gradient-to-r from-gold-light via-gold to-gold-dark px-10 py-4 rounded-sm hover:brightness-110 transition-all gold-glow">
-                            <span>Submit Audit Request</span>
-                            <i data-lucide="send" class="w-4 h-4"></i>
-                        </button>
+                    <!-- Social Media Toggles -->
+                    <div>
+                        <label class="block text-xs font-bold text-white uppercase tracking-wider mb-3 flex items-center">
+                            <i class="fa-solid fa-share-nodes text-gold-500 mr-2"></i> Social Channels & Ongoing Management
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="cursor-pointer glass-card p-3.5 rounded-xl border border-white/10 flex items-center gap-3 hover:border-gold-500/40 transition-all">
+                                <input type="checkbox" id="socialSetup" onchange="calculateTotal()" class="w-4 h-4 accent-gold-500 rounded">
+                                <span class="text-xs text-gray-200">Channel Setup & Branding (+£200)</span>
+                            </label>
+                            <label class="cursor-pointer glass-card p-3.5 rounded-xl border border-white/10 flex items-center gap-3 hover:border-gold-500/40 transition-all">
+                                <input type="checkbox" id="socialMgmt" onchange="calculateTotal()" class="w-4 h-4 accent-gold-500 rounded" checked>
+                                <span class="text-xs text-gray-200">Monthly Account Mgmt (+£700/mo)</span>
+                            </label>
+                        </div>
                     </div>
-                </form>
 
+                    <!-- Priority Delivery Toggle -->
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                        <div>
+                            <div class="text-xs font-bold text-white uppercase tracking-wider">72-Hour Priority Sprint</div>
+                            <div class="text-[11px] text-gray-400">Fast-track delivery with dedicated senior tech lead</div>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="rushDelivery" onchange="calculateTotal()" class="sr-only peer">
+                            <div class="w-11 h-6 bg-carbon-900 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gold-500"></div>
+                        </label>
+                    </div>
+
+                </div>
+
+                <!-- Result Card -->
+                <div class="lg:col-span-5 glass-card rounded-2xl p-6 sm:p-8 border border-gold-500/40 relative">
+                    <div class="text-[10px] uppercase tracking-widest text-gold-400 font-extrabold mb-2">Calculated Total Investment</div>
+                    
+                    <div class="flex items-baseline gap-2 mb-6">
+                        <span id="totalPrice" class="text-4xl sm:text-5xl font-serif font-bold gold-gradient-text">£1,250</span>
+                        <span id="recurringNote" class="text-xs text-gray-400 font-light">+ £700/mo ongoing</span>
+                    </div>
+
+                    <div class="space-y-3 border-t border-white/10 pt-6 text-xs text-gray-300 mb-8" id="summaryList">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+
+                    <button onclick="bookCalculatedPackage()" class="gold-btn w-full py-4 rounded-xl text-xs uppercase font-extrabold tracking-widest flex items-center justify-center gap-2">
+                        Lock In Calculated Scope <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <p class="text-[10px] text-center text-gray-500 mt-4">
+                        <i class="fa-solid fa-shield-halved text-gold-500/70"></i> Full Commercial License & NDA Included
+                    </p>
+                </div>
             </div>
-
         </div>
     </section>
 
-    <!-- LUXURY FOOTER -->
-    <footer class="border-t border-white/10 bg-obsidian-surface py-12 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            
-            <div class="flex items-center gap-3">
-                <div class="w-6 h-6 rounded-sm bg-gold flex items-center justify-center">
-                    <span class="text-obsidian font-cinzel font-bold text-[10px]">Q</span>
+    <!-- ================= 4-STEP PROCESS TIMELINE ================= -->
+    <section id="workflow" class="py-24 px-4 bg-carbon-900 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Seamless Workflow</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">4-Step Execution Process</p>
+                <p class="text-gray-400 text-sm mt-2">How we transform your business goals into high-converting assets in days.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="glass-card rounded-2xl p-6 relative gold-border-glow">
+                    <div class="text-3xl font-serif font-black gold-gradient-text mb-4">01</div>
+                    <h3 class="text-base font-bold text-white mb-2">Discovery Brief</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        We map your brand position, competitors, key value drivers, and target audiences.
+                    </p>
                 </div>
-                <span class="font-cinzel tracking-widest text-sm font-semibold text-white">QORTEX ARCHIVES</span>
+
+                <!-- Step 2 -->
+                <div class="glass-card rounded-2xl p-6 relative gold-border-glow">
+                    <div class="text-3xl font-serif font-black gold-gradient-text mb-4">02</div>
+                    <h3 class="text-base font-bold text-white mb-2">Development & Editing</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Engineers write custom web components while video teams render 20-second viral ad cuts.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-card rounded-2xl p-6 relative gold-border-glow">
+                    <div class="text-3xl font-serif font-black gold-gradient-text mb-4">03</div>
+                    <h3 class="text-base font-bold text-white mb-2">Social Launch</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Channels are created or optimized, tracking pixels set up, and content schedules primed.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-card rounded-2xl p-6 relative gold-border-glow">
+                    <div class="text-3xl font-serif font-black gold-gradient-text mb-4">04</div>
+                    <h3 class="text-base font-bold text-white mb-2">Transfer & Scale</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Full admin rights, raw source files, and campaign dashboards are handed over.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ ACCORDION ================= -->
+    <section id="faq" class="py-24 px-4 bg-carbon-950 relative border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-[0.3em] text-gold-500 font-bold mb-3">Clear Answers</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Frequently Asked Questions</p>
             </div>
 
-            <p class="text-[10px] tracking-widest uppercase text-slate-500 text-center">
-                &copy; 2026 QORTEX ARCHIVES. ALL RIGHTS RESERVED. CRAFTSMANSHIP. DRIVEN.
-            </p>
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
+                    <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-sm focus:outline-none">
+                        <span>How quickly can QORTEX deploy my website and short-form video ads?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-gold-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-1" class="hidden px-6 pb-6 text-xs text-gray-300 leading-relaxed border-t border-white/5 pt-4">
+                        Standard builds and video ad packages are typically delivered in 5 to 7 business days. If you select our 72-Hour Priority Sprint option in the calculator, we assign a dedicated senior team to complete delivery within 3 days.
+                    </div>
+                </div>
 
-            <div class="flex items-center space-x-6 text-slate-400 text-xs">
-                <a href="#" class="hover:text-gold transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                <a href="#" class="hover:text-gold transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-                <a href="#" class="hover:text-gold transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                <!-- FAQ 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
+                    <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-sm focus:outline-none">
+                        <span>What video formats and aspect ratios will I receive?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-gold-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-2" class="hidden px-6 pb-6 text-xs text-gray-300 leading-relaxed border-t border-white/5 pt-4">
+                        All videos are delivered in vertical 9:16 HD (1080x1920) optimized for TikTok, Instagram Reels, and YouTube Shorts, alongside 1:1 square renders for Facebook and feed placements.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
+                    <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex justify-between items-center text-white font-semibold text-sm focus:outline-none">
+                        <span>Do I own full commercial rights and code after completion?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-gold-500 transition-transform"></i>
+                    </button>
+                    <div id="faq-answer-3" class="hidden px-6 pb-6 text-xs text-gray-300 leading-relaxed border-t border-white/5 pt-4">
+                        Yes, 100%. Upon final delivery, all custom code, project repositories, video master renders, and platform admin accounts are fully transferred to your company.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-carbon-950 border-t border-white/10 py-12 px-4 text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded border border-gold-500/40 bg-carbon-900 flex items-center justify-center font-serif font-bold text-gold-500">
+                    Q
+                </div>
+                <span class="font-serif font-bold text-white tracking-widest text-sm">QORTEX ARCHIVES</span>
             </div>
 
+            <div class="flex gap-6 text-gray-400">
+                <a href="#services" class="hover:text-gold-400 transition-colors">Services</a>
+                <a href="#bundles" class="hover:text-gold-400 transition-colors">Bundles</a>
+                <a href="#calculator" class="hover:text-gold-400 transition-colors">Calculator</a>
+                <a href="#workflow" class="hover:text-gold-400 transition-colors">Process</a>
+                <a href="#faq" class="hover:text-gold-400 transition-colors">FAQ</a>
+            </div>
+
+            <div class="text-gray-500">
+                © <span id="currentYear"></span> QORTEX ARCHIVES LLC. All rights reserved.
+            </div>
         </div>
     </footer>
 
-    <!-- MEDIA LIGHTBOX MODAL (VIDEO / HIGH-RES ARTWORK) -->
-    <div id="media-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-obsidian/95 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-300">
-        <div class="relative w-full max-w-5xl glass-luxury border border-gold/30 shadow-2xl transform scale-95 transition-transform duration-300" id="modal-container">
-            
-            <!-- Modal Header -->
-            <div class="flex items-center justify-between p-4 border-b border-white/10 bg-obsidian">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="film" class="w-4 h-4 text-gold"></i>
-                    <h3 class="text-xs font-cinzel font-semibold tracking-widest uppercase text-white" id="modal-title">Archive Preview</h3>
+    <!-- ================= CONSULTATION MODAL ================= -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+        <div class="glass-card w-full max-w-lg rounded-2xl p-6 sm:p-8 border border-gold-500/40 relative text-left">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="text-2xl font-serif font-bold text-white mb-1">Book Consultation</h3>
+            <p class="text-xs text-gold-400 mb-6">Initiate your project scope with the QORTEX technical team.</p>
+
+            <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Your Name *</label>
+                    <input type="text" name="name" required placeholder="Alex Mercer" class="w-full bg-carbon-900 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:border-gold-500 outline-none">
                 </div>
-                <button id="close-modal-btn" class="p-1.5 text-slate-400 hover:text-white transition-colors">
-                    <i data-lucide="x" class="w-5 h-5"></i>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Work Email *</label>
+                    <input type="email" name="email" required placeholder="alex@company.com" class="w-full bg-carbon-900 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:border-gold-500 outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Selected Package / Scope</label>
+                    <input type="text" id="modalScopeInput" name="package" readonly class="w-full bg-carbon-850 border border-gold-500/30 rounded-xl px-4 py-3 text-xs text-gold-300 font-semibold outline-none cursor-not-allowed">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Project Details or Goal Notes</label>
+                    <textarea name="message" rows="3" placeholder="Tell us about your brand, website goals, or target audience..." class="w-full bg-carbon-900 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:border-gold-500 outline-none"></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn" class="gold-btn w-full py-3.5 rounded-xl text-xs uppercase tracking-widest font-extrabold mt-2">
+                    Submit Proposal Request
                 </button>
-            </div>
-
-            <!-- Modal Content Frame -->
-            <div class="relative aspect-video w-full bg-obsidian flex items-center justify-center overflow-hidden">
-                <iframe id="modal-iframe" class="w-full h-full hidden" src="" title="Archive Media" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <img id="modal-image" class="w-full h-full object-contain hidden" src="" alt="High Res Archive Preview">
-            </div>
-
+            </form>
         </div>
     </div>
 
-    <!-- SUBMISSION CONFIRMATION TOAST -->
-    <div id="toast" class="fixed bottom-8 right-8 z-50 glass-luxury border border-gold/50 p-4 text-xs text-gold tracking-widest uppercase opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3">
-        <i data-lucide="check-circle" class="w-5 h-5 text-gold"></i>
-        <span>Request Received. Our Director will reach out shortly.</span>
+    <!-- Notification Overlay -->
+    <div id="notificationBox" class="fixed bottom-6 right-6 z-50 hidden glass-card border border-gold-500/50 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-gold-500 text-xl"></i>
+        <div>
+            <div class="text-xs font-bold" id="notifTitle">Proposal Request Received</div>
+            <div class="text-[11px] text-gray-300" id="notifDesc">A senior technical lead will contact you shortly.</div>
+        </div>
     </div>
 
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        // Dynamic Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Mobile Menu Drawer Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileDrawer = document.getElementById('mobile-drawer');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileDrawer.classList.toggle('hidden');
-        });
-
-        // Filterable Archive Portfolio System
-        const filterBtns = document.querySelectorAll('.archive-filter-btn');
-        const archiveCards = document.querySelectorAll('.archive-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => {
-                    b.classList.remove('active', 'border-gold', 'bg-gold/10', 'text-gold');
-                    b.classList.add('border-white/10', 'bg-obsidian-card', 'text-slate-400');
-                });
-
-                btn.classList.add('active', 'border-gold', 'bg-gold/10', 'text-gold');
-                btn.classList.remove('border-white/10', 'bg-obsidian-card', 'text-slate-400');
-
-                const filter = btn.getAttribute('data-filter');
-
-                archiveCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Lightbox Modal Controller
-        const mediaModal = document.getElementById('media-modal');
-        const modalContainer = document.getElementById('modal-container');
-        const modalTitle = document.getElementById('modal-title');
-        const modalIframe = document.getElementById('modal-iframe');
-        const modalImage = document.getElementById('modal-image');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-        const heroArtworkTrigger = document.getElementById('hero-artwork-trigger');
-
-        function openModalWithImage(src, title) {
-            modalTitle.textContent = title;
-            modalIframe.classList.add('hidden');
-            modalIframe.src = '';
-            modalImage.src = src;
-            modalImage.classList.remove('hidden');
-
-            mediaModal.classList.remove('opacity-0', 'pointer-events-none');
-            mediaModal.classList.add('opacity-100');
-            modalContainer.classList.remove('scale-95');
-            modalContainer.classList.add('scale-100');
+        // Currency formatter (GBP)
+        function gbp(n) {
+            return '£' + n.toLocaleString('en-GB');
         }
 
-        function openModalWithVideo(embedUrl, title) {
-            modalTitle.textContent = title;
-            modalImage.classList.add('hidden');
-            modalIframe.src = embedUrl;
-            modalIframe.classList.remove('hidden');
+        // Mobile Menu Drawer Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
 
-            mediaModal.classList.remove('opacity-0', 'pointer-events-none');
-            mediaModal.classList.add('opacity-100');
-            modalContainer.classList.remove('scale-95');
-            modalContainer.classList.add('scale-100');
+        // Service Filter Tabs
+        function filterServices(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const btns = document.querySelectorAll('.service-tab-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('border-gold-500', 'text-gold-400');
+                btn.classList.add('border-white/10', 'text-gray-400');
+            });
+
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-white/10', 'text-gray-400');
+                activeBtn.classList.add('border-gold-500', 'text-gold-400');
+            }
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion
+        function toggleFaq(index) {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Interactive Price Calculator
+        function calculateTotal() {
+            const webVal = parseInt(document.getElementById('webDevSelect').value);
+            const videoSteps = [0, 1, 3, 6];
+            const videoCount = videoSteps[parseInt(document.getElementById('videoSlider').value)];
+            const socialSetup = document.getElementById('socialSetup').checked;
+            const socialMgmt = document.getElementById('socialMgmt').checked;
+            const rushDelivery = document.getElementById('rushDelivery').checked;
+
+            const videoPricePerUnit = 50;
+            const webSelect = document.getElementById('webDevSelect');
+            const includedVideos = parseInt(webSelect.options[webSelect.selectedIndex].dataset.videos || '0');
+            const extraVideos = Math.max(0, videoCount - includedVideos);
+            const videoTotal = extraVideos * videoPricePerUnit;
+            const setupTotal = socialSetup ? 200 : 0;
+            const mgmtTotal = socialMgmt ? 700 : 0;
+
+            let upfrontTotal = webVal + videoTotal + setupTotal;
+            if (rushDelivery) {
+                upfrontTotal = Math.round(upfrontTotal * 1.25);
+            }
+
+            document.getElementById('webDevLabel').innerText = gbp(webVal);
+            let videoLabel;
+            if (extraVideos > 0) {
+                videoLabel = `${videoCount} Videos (+${gbp(videoTotal)})`;
+            } else if (videoCount > 0) {
+                videoLabel = `${videoCount} Videos (included)`;
+            } else {
+                videoLabel = `0 Videos`;
+            }
+            document.getElementById('videoCountDisplay').innerText = videoLabel;
+            document.getElementById('totalPrice').innerText = gbp(upfrontTotal);
+            
+            const recurringNote = document.getElementById('recurringNote');
+            if (mgmtTotal > 0) {
+                recurringNote.innerText = `+ ${gbp(mgmtTotal)}/mo ongoing`;
+                recurringNote.classList.remove('hidden');
+            } else {
+                recurringNote.classList.add('hidden');
+            }
+
+            const summaryList = document.getElementById('summaryList');
+            summaryList.innerHTML = '';
+
+            if (webVal > 0) {
+                const webText = document.getElementById('webDevSelect').options[document.getElementById('webDevSelect').selectedIndex].text;
+                summaryList.innerHTML += `<div class="flex justify-between"><span>Web Scope:</span> <span class="font-bold text-white">${webText.split('(')[0]}</span></div>`;
+            }
+            if (videoCount > 0) {
+                summaryList.innerHTML += `<div class="flex justify-between"><span>20-Sec Video Ads:</span> <span class="font-bold text-white">${videoCount} Videos${includedVideos > 0 ? ` (${Math.min(includedVideos, videoCount)} included)` : ''}</span></div>`;
+            }
+            if (socialSetup) {
+                summaryList.innerHTML += `<div class="flex justify-between"><span>Channel Creation:</span> <span class="font-bold text-white">Included</span></div>`;
+            }
+            if (socialMgmt) {
+                summaryList.innerHTML += `<div class="flex justify-between"><span>Monthly Management:</span> <span class="font-bold text-white">${gbp(mgmtTotal)}/mo</span></div>`;
+            }
+            if (rushDelivery) {
+                summaryList.innerHTML += `<div class="flex justify-between text-gold-400"><span>72h Priority Delivery:</span> <span class="font-bold">+25% Sprint</span></div>`;
+            }
+        }
+
+        // Modal Logic
+        function openModal(scopeName) {
+            document.getElementById('modalScopeInput').value = scopeName || 'Custom Consultation';
+            document.getElementById('bookingModal').classList.remove('hidden');
         }
 
         function closeModal() {
-            mediaModal.classList.add('opacity-0', 'pointer-events-none');
-            mediaModal.classList.remove('opacity-100');
-            modalContainer.classList.add('scale-95');
-            modalContainer.classList.remove('scale-100');
-            modalIframe.src = '';
+            document.getElementById('bookingModal').classList.add('hidden');
         }
 
-        // Hero Artwork Lightbox Event
-        heroArtworkTrigger.addEventListener('click', () => {
-            openModalWithImage(
-                'https://github.com/user-attachments/assets/a12a9fbd-ef16-4c45-ba37-9207f21e4bb0', 
-                'Qortex Hero Platform Architecture'
-            );
-        });
+        function bookCalculatedPackage() {
+            const price = document.getElementById('totalPrice').innerText;
+            const scopeDesc = `Calculated Custom Package (${price})`;
+            openModal(scopeDesc);
+        }
 
-        // Archive Card Lightbox Events
-        archiveCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const title = card.getAttribute('data-title');
-                const video = card.getAttribute('data-video');
-                openModalWithVideo(video, title);
-            });
-        });
+        // Where form submissions are sent. Replace with your Formspree endpoint,
+        // e.g. 'https://formspree.io/f/abcdwxyz'
+        const FORM_ENDPOINT = 'YOUR_FORM_ENDPOINT_HERE';
 
-        closeModalBtn.addEventListener('click', closeModal);
-        mediaModal.addEventListener('click', (e) => {
-            if (e.target === mediaModal) closeModal();
-        });
+        function showNotification(title, desc) {
+            document.getElementById('notifTitle').innerText = title;
+            document.getElementById('notifDesc').innerText = desc;
+            const notif = document.getElementById('notificationBox');
+            notif.classList.remove('hidden');
+            setTimeout(() => notif.classList.add('hidden'), 5000);
+        }
 
-        // Form Submission Confirmation Toast
-        const enquiryForm = document.getElementById('enquiry-form');
-        const toast = document.getElementById('toast');
-
-        enquiryForm.addEventListener('submit', (e) => {
+        async function handleFormSubmit(e) {
             e.preventDefault();
-            toast.classList.remove('opacity-0', 'pointer-events-none');
-            toast.classList.add('opacity-100');
+            const form = e.target;
+            const btn = document.getElementById('submitBtn');
 
-            setTimeout(() => {
-                toast.classList.add('opacity-0', 'pointer-events-none');
-                toast.classList.remove('opacity-100');
-            }, 4000);
-
-            enquiryForm.reset();
-        });
-
-        // Background Metallic Particles Animation Canvas
-        const canvas = document.getElementById('bg-canvas');
-        const ctx = canvas.getContext('2d');
-
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
-
-        window.addEventListener('resize', () => {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-            initParticles();
-        });
-
-        class GoldParticle {
-            constructor() {
-                this.reset();
+            if (FORM_ENDPOINT.includes('YOUR_FORM_ENDPOINT')) {
+                showNotification('Form not connected yet', 'Add your form endpoint to send requests to your email.');
+                return;
             }
 
-            reset() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.size = Math.random() * 1.5 + 0.3;
-                this.vx = (Math.random() - 0.5) * 0.2;
-                this.vy = (Math.random() - 0.5) * 0.2;
-                this.alpha = Math.random() * 0.4 + 0.1;
-            }
+            const originalText = btn.innerText;
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
 
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
+            try {
+                const response = await fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
 
-                if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
-                    this.reset();
+                if (response.ok) {
+                    form.reset();
+                    closeModal();
+                    showNotification('Proposal Request Received', 'A senior technical lead will contact you shortly.');
+                } else {
+                    showNotification('Something went wrong', 'Your request was not sent. Please try again.');
                 }
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(197, 160, 89, ${this.alpha})`;
-                ctx.fill();
+            } catch (err) {
+                showNotification('Connection problem', 'Your request was not sent. Check your connection and try again.');
+            } finally {
+                btn.innerText = originalText;
+                btn.disabled = false;
             }
         }
 
-        let particles = [];
-        function initParticles() {
-            particles = [];
-            const count = Math.floor((width * height) / 16000);
-            for (let i = 0; i < count; i++) {
-                particles.push(new GoldParticle());
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, width, height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            requestAnimationFrame(animate);
-        }
-
+        // Run calculation initial state
         window.onload = function() {
-            initParticles();
-            animate();
-        };
+            calculateTotal();
+        }
     </script>
 </body>
 </html>
